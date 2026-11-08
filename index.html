@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="IconCalculadora.ico" type="image/x-icon">
+    <title>Calculadora Moderna</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Ícones via FontAwesome para botões visuais -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="calculator-container">
+        <!-- Calculadora Principal -->
+        <main class="calculator">
+            <!-- Cabeçalho com o botão de tema -->
+            <header class="calc-header">
+                <h1>Calculadora Moderna</h1>
+                <button id="theme-toggle" aria-label="Alternar tema">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </header>
+
+            <!-- Visor -->
+            <div class="display">
+                <div id="previous-operand" class="previous-operand"></div>
+                <div id="current-operand" class="current-operand">0</div>
+            </div>
+
+            <!-- Teclado / Botões -->
+            <div class="buttons-grid">
+                <button class="btn function" data-action="clear">C</button>
+                <button class="btn function" data-action="delete"><i class="fa-solid fa-delete-left"></i></button>
+                <button class="btn function" data-action="percent">%</button>
+                <button class="btn operator" data-action="divide">÷</button>
+
+                <button class="btn number" data-number="7">7</button>
+                <button class="btn number" data-number="8">8</button>
+                <button class="btn number" data-number="9">9</button>
+                <button class="btn operator" data-action="multiply">×</button>
+
+                <button class="btn number" data-number="4">4</button>
+                <button class="btn number" data-number="5">5</button>
+                <button class="btn number" data-number="6">6</button>
+                <button class="btn operator" data-action="subtract">-</button>
+
+                <button class="btn number" data-number="1">1</button>
+                <button class="btn number" data-number="2">2</button>
+                <button class="btn number" data-number="3">3</button>
+                <button class="btn operator" data-action="add">+</button>
+
+                <button class="btn function" data-action="sign">+/-</button>
+                <button class="btn number" data-number="0">0</button>
+                <button class="btn number" data-decimal=",">,</button>
+                <button class="btn equals" data-action="calculate">=</button>
+            </div>
+        </main>
+
+        <!-- Painel de Histórico -->
+        <aside class="history-panel">
+            <div class="history-header">
+                <h2>Histórico</h2>
+                <button id="clear-history" class="btn-clear-history">Limpar</button>
+            </div>
+            <ul id="history-list">
+                <!-- Os itens do histórico entram aqui via JavaScript -->
+            </ul>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
